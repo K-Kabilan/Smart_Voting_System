@@ -27,6 +27,8 @@ Each vote is recorded on the blockchain, making it impossible to alter once reco
 ## **System Architecture:**
 The voting system is composed of several key modules:
 
+![System_Architecture](C:\Users\kabil\OneDrive\Pictures\ark 3.png)
+
 ### **User Authentication Module:**
 Ensures secure login with Voter ID, Aadhaar, and face recognition.
 
@@ -58,3 +60,8 @@ Records each vote as a transaction on the blockchain, providing a transparent an
 2. Upon successful verification, the voter is given a digital ballot to cast their vote.
 3. Votes are encrypted using RSA encryption and recorded as transactions on the blockchain.
 4. Each vote is securely stored and can be verified by authorized parties, ensuring transparency and security.
+
+## Output:
+Here is a screenshot of the project:
+
+![Voting Interface](./images/voting_interface.png)
