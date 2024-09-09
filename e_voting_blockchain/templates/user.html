@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote Page</title>
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-image: url('static/b3.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        .voting-container {
+            position: relative;
+            background-color: whitesmoke;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            width: 400px;
+            text-align: center;
+        }
+
+        .home-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #FF671F;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .home-button:hover {
+            background: #046A38;
+        }
+
+        h1 {
+            color: black;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        label {
+            display: block;
+            margin: 15px 0;
+        }
+
+        input[type="radio"] {
+            display: none;
+        }
+
+        .party {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+        }
+
+        .party img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .party:hover {
+            background-color: #FF671F;
+        }
+
+        .party.selected {
+            background-color: #046A38;
+            color: #fff;
+        }
+
+        input[type="submit"] {
+            background-color: #FF671F;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #046A38;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="voting-container">
+        <a href="{{url_for('getuser')}}" class="home-button">Back</a> <!-- Moved into the container -->
+        <h1>VOTING PAGE</h1>
+
+        <form action="" method="post">
+            <label class="party" id="admk">
+                <input type="radio" class="form-check-input" id="materialGroupExample1" name="groupOfMaterialRadios" value="admk" onclick="selectParty('admk')">
+                <img src="static\ADMK.png" alt="ADMK Logo">
+                ADMK - Edappadi K. Palaniswami 
+            </label>
+
+            <label class="party" id="dmk">
+                <input type="radio" class="form-check-input" id="materialGroupExample2" name="groupOfMaterialRadios" value="dmk" onclick="selectParty('dmk')">
+                <img src="static\DMK.jpeg" alt="DMK Logo">
+                DMK - M. K. Stalin
+            </label>
+
+            <label class="party" id="mnm">
+                <input type="radio" class="form-check-input" id="materialGroupExample3" name="groupOfMaterialRadios" value="mnm" onclick="selectParty('mnm')">
+                <img src="static\MNM.png" alt="MNM Logo">
+                MNM - Kamal Haasan
+            </label>
+
+            <label class="form-control">
+                <input type="number" name="otp" placeholder="Enter OTP">
+            </label>
+            
+
+            <input type="submit" value="Vote">
+        </form>
+    </div>
+
+    <script>
+        function selectParty(partyId) {
+            // Remove 'selected' class from all parties
+            var parties = document.querySelectorAll('.party');
+            parties.forEach(function (party) {
+                party.classList.remove('selected');
+            });
+
+            // Add 'selected' class to the clicked party
+            var selectedParty = document.getElementById(partyId);
+            selectedParty.classList.add('selected');
+        }
+    </script>
+    
+    {{dat}}
+    {{vname}}
+    {{vid}}
+</body>
+</html>

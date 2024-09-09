@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-image: url('static/b3.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        .form-container {
+            max-width: 900px;
+            width: 800px;
+            background: whitesmoke;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .home-button {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #FF671F;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .home-button:hover {
+            background: #046A38;
+        }
+
+        .form-container header {
+            font-size: 2rem;
+            color: #333333;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-container .form {
+            color: black;
+        }
+
+        .form label {
+            color: black;
+            display: inline-block;
+            width: 200px;
+            text-align: left;
+            margin-right: 50px;
+            font-size: 18px;
+            margin-bottom: 30px; /* Added vertical margin */
+        }
+
+        .form label0 {
+            text-align: center;
+            color: black;
+            font-size: 18px;
+        }
+
+        .form label1 {
+            display: inline-block;
+            color: black;
+            font-size: 18px;
+        }
+
+        .custom-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #FF671F;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition:  all 0.2s ease;
+        }
+
+        .custom-button:hover {
+            background-color: #046A38; 
+         }
+
+
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="" />
+</head>
+
+<body>
+    <div class="form-container">
+        <a href="{{url_for('getuser')}}" class="home-button">Back</a>
+        <header>USER DETAILS</header>
+        <div class="form">
+            <form action="/getuser" method="POST" id="aadhar">
+                <div>
+                    <label>Name</label>
+                    <label0>:</label0>
+                    <label1> &ensp; &emsp;{{ user_details[0] }}</label1>
+                </div>
+                <div>
+                    <label>Voter ID Number</label>
+                    <label0>:</label0>
+                    <label1> &ensp; &emsp;{{ user_details[2] }}</label1>
+                </div>
+                <div>
+                    <label>Phone Number</label>
+                    <label0>:</label0>
+                    <label1> &ensp; &emsp;{{ user_details[3] }}</label1>
+                </div>
+                <div>
+                    <label>Email ID</label>
+                    <label0>:</label0>
+                    <label1>&ensp; &emsp;{{ user_details[4]}}</label1>
+                </div>
+                <div>
+                    <label>Birth Date</label>
+                    <label0>:</label0>
+                    <label1> &ensp; &emsp;{{ user_details[5] }}</label1>
+                </div>
+                <div>
+                    <label>Aadhaar Number</label>
+                    <label0>:</label0>
+                    <label1>&ensp; &emsp;{{ user_details[6] }}</label1>
+                </div>
+               <div>
+              <center><p><a href="/userpage?email={{ user_details[4]}}" class="custom-button">Next</a></p></center></div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

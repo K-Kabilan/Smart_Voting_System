@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Message Popup</title>
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-image: url('static/b3.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        .popup-container {
+            background-color: whitesmoke;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 600px; /* Increased max-width */
+            text-align: center;
+        }
+
+        .popup-message {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .back-button {
+            background: #FF671F;
+            color: #fff;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .back-button:hover {
+            background-color: #046A38;
+        }
+    </style>
+</head>
+<body>
+    <div class="popup-container" id="popup">
+        <p class="popup-message"><h1> Enter Valid Aadhaar Number</h1> </p>
+        <a href="{{url_for('getuser')}}" class="back-button">Back</a>
+    </div>
+
+    <script>
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

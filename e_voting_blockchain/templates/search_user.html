@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background-image: url('static/b3.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+        }
+
+        .form-container {
+            max-width: 700px;
+            width: 100%;
+            background: whitesmoke;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            position: relative; /* Make container position relative */
+        }
+
+        .home-button {
+            position: absolute;
+            top: 10px; /* Adjust top position as needed */
+            left: 10px; /* Adjust left position as needed */
+            background: #FF671F;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .home-button:hover {
+            background: #046A38;
+        }
+
+        .form-container header {
+            font-size: 1.5rem;
+            color: #333;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        .form-container .form {
+            margin-top: 30px;
+        }
+
+        .form .input-box {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .input-box label {
+            color: black;
+        }
+
+        .form :where(.input-box input, .select-box) {
+            position: relative;
+            height: 50px;
+            width: 100%;
+            outline: none;
+            font-size: 1rem;
+            color: black;
+            margin-top: 8px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 0 15px;
+        }
+
+        .input-box input:focus {
+            box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .form .column {
+            display: flex;
+            column-gap: 15px;
+        }
+
+        .form button {
+            height: 55px;
+            width: 100%;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 400;
+            margin-top: 30px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            background: #FF671F;
+        }
+
+        .form button:hover {
+            background: #046A38;
+        }
+
+        @media screen and (max-width: 500px) {
+            .form .column {
+                flex-wrap: wrap;
+            }
+
+            .form :where(.gender-option, .gender) {
+                row-gap: 15px;
+            }
+        }
+    </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<link rel="stylesheet" href="" />
+</head>
+<body>
+    <div class="form-container">
+        <div class="nav bg-transparent">
+            <a href="{{url_for('login')}}" class="home-button">Home</a>
+        <header>User Search</header>
+        <div class="form">
+            <form action="/getuser" method="POST" id="aadhar">
+                <div class="input-box">
+                    <label>Aadhar Number</label>
+                    <input type="number" name="aadhar" placeholder="Enter Aadhar Number"required autocomplete="off"/>
+                </div>
+                <button>Search</button>
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>

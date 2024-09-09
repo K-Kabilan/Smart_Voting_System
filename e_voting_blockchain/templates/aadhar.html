@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="nav bg-dark">
+        <a href="{{url_for('login')}}" class="btn btn-primary">Home</a>
+        <a href="{{url_for('registers')}}" class="btn btn-primary">Aadhar</a>
+    </div>
+    <br>
+    <br>
+    <form action="" method="POST">
+          
+    {% if  regs %}
+    <div class="row">
+        <div class="col-sm-6 mx-auto">
+            <table class="table">
+                <tr>
+                    <th>Name</th>
+                    <th>Password</th>
+                    <th>Cpwd</th>
+                    <th>Phone No.</th>
+                    <th>Email</th>
+                    <th>DOB</th>
+                </tr>
+                {% for i in regs %}
+                <tr>
+                    <td>{{i[0]}}</td>
+                    <td>{{i[1]}}</td>
+                    <td>{{i[2]}}</td>
+                    <td>{{i[3]}}</td>
+                    <td>{{i[4]}}</td>
+                    <td>{{i[5]}}</td>
+                </tr>
+                {%endfor%}
+            </table>
+        </div>
+ {% endif %}
+
+</form>
+</body>
+</html>

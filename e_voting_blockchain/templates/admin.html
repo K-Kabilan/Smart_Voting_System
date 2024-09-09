@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="nav bg-dark">
+        <a href="{{url_for('login')}}" class="btn btn-primary">Home</a>
+        <a href="{{url_for('registers')}}" class="btn btn-primary">Aadhar</a>
+    </div>
+    <br>
+    <br>
+    <form action="" method="POST">
+     <center><input type="submit" class="btn btn-success" value="Counting"></center>
+     <div class="row">
+        <div class="col-sm-4">
+         
+            <table class="table">
+                <tr>
+                    <th>Private Key</th>
+                    <th>Text Cipher</th>
+                    <th>Public Key</th>
+                </tr>
+                {% for i in rows%}
+                <tr>
+                    <td>{{i[0]}}</td>
+                    <td>{{i[1]}}</td>
+                    <td>{{i[2]}}</td>
+                </tr>
+                {%endfor%}
+            </table>
+        </div>
+        <div class="col-sm-4">
+            <table class="table">
+                <tr>
+                    <th>Private Key</th>
+                    <th>Text Cipher</th>
+                    <th>Public Key</th>
+                    <th>Original Text</th>
+                </tr>
+                {%for i in dd%}
+                <tr>
+                        <td>{{i[0]}}</td>
+                        <td>{{i[1]}}</td>
+                        <td>{{i[2]}}</td>
+                        <td>{{i[3]}}</td>
+                </tr>
+                {%endfor%}
+            </table>
+        </div>
+        <div class="col-sm-4">
+            <table class="table">
+                <tr>
+                    <td>ADMK Votes</td><td>{{admkc}}</td>
+                </tr>
+                <tr>
+                    <td>DMK Votes</td><td>{{dmkc}}</td>
+                </tr>
+                <tr>
+                    <td>MNM Votes</td><td>{{mnmc}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+ 
+    
+</form>
+</body>
+</html>
