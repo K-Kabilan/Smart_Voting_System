@@ -64,4 +64,4 @@ Records each vote as a transaction on the blockchain, providing a transparent an
 ## Output:
 Here is a screenshot of the project:
 
-![Voting Interface](./images/voting_interface.png)
+![Voting Interface](.output/1 (User_Login).png)
