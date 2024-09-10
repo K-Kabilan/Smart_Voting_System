@@ -67,5 +67,17 @@ Here are some screenshots of the project:
 <p align="center">
   <img src="output/1%20%28User_Login%29.png" alt="User Login" width="45%" />
   <img src="output/2%20%28Admin_Login%29.png" alt="Admin Login" width="45%" style="margin-left: 10px;" />
+  <img src="output/3%20%28Registration%29.png" alt="Registration" width="45%" />
+  <img src="output/4%20%28Face_Verification%29.png" alt="Face Verification" width="45%" style="margin-left: 10px;" />
+  <img src="output/5%20%28Aadhar_Verification%29.png" alt="Aadhar Verification" width="45%" />
+  <img src="output/6%20%28Aadhar_Details%29.png" alt="Aadhar Details" width="45%" style="margin-left: 10px;" />
+  <img src="output/7%20%28Voting_Page%29.png" alt="Voting Page" width="45%" />
+  <img src="output/8.png" alt="#" width="45%" style="margin-left: 10px;" /> 
+  <img src="output/9.png" alt="#" width="45%" />
+  <img src="output/10.png" alt="#" width="45%" style="margin-left: 10px;" /> 
+  <img src="output/11.png" alt="#" width="45%" />
+  <img src="output/12.png" alt="#" width="45%" style="margin-left: 10px;" />
+  <img src="output/13.png" alt="#" width="45%" />
+  <img src="#" alt="#" width="45%" style="margin-left: 10px;" />
 </p>
 
