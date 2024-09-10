@@ -1,5 +1,1 @@
-e_voting_blockchain/templates/user_not_found.html linguist-vendored
-e_voting_blockchain/templates/userdetails.html linguist-vendored
-e_voting_blockchain/templates/user.html linguist-vendored
-e_voting_blockchain/templates/admin.html linguist-vendored
-e_voting_blockchain/templates/search_user.html linguist-vendored
+e_voting_blockchain/templates/* linguist-vendored
