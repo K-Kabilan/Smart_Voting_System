@@ -61,7 +61,11 @@ Records each vote as a transaction on the blockchain, providing a transparent an
 3. Votes are encrypted using RSA encryption and recorded as transactions on the blockchain.
 4. Each vote is securely stored and can be verified by authorized parties, ensuring transparency and security.
 
-## Output:
-Here is a screenshot of the project:
-Here is a screenshot of the project: ![Architecture Diagram](output/1%20%28User_Login%29.png)
+## Project 
+Here are some screenshots of the project:
+
+<p align="center">
+  <img src="output/1%20%28User_Login%29.png" alt="Architecture Diagram" width="45%" />
+  <img src="output/1%20%28User_Login%29.png" alt="Another Diagram" width="45%" style="margin-left: 10px;" />
+</p>
 
