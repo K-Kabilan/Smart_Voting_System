@@ -5,3 +5,4 @@ e_voting_blockchain/templates/login.html linguist-vendored
 e_voting_blockchain/templates/admin_login.html linguist-vendored
 e_voting_blockchain/templates/registration.html linguist-vendored
 e_voting_blockchain/templates/user.html linguist-vendored
+e_voting_blockchain/templates/search_user.html linguist-vendored
