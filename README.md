@@ -63,6 +63,5 @@ Records each vote as a transaction on the blockchain, providing a transparent an
 
 ## Output:
 Here is a screenshot of the project:
-![Architecture Diagram](output/1 (User_Login).png)
-
+Here is a screenshot of the project: ![Architecture Diagram](output/1%20%28User_Login%29.png)
 
