@@ -1,13 +1,4 @@
-<h1 style="color: #6a5acd; animation: popUp 1.5s ease-in-out infinite;">Smart-Voting-System</h1>
-
-<style>
-@keyframes popUp {
-  0% {transform: scale(1); color: #6a5acd;}
-  50% {transform: scale(1.2); color: #ff6347;}
-  100% {transform: scale(1); color: #6a5acd;}
-}
-</style>
-
+# **Smart-Voting-System**
 **Smart Voting System Using Blockchain Technology**
 
 ## **Project Overview:**
