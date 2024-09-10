@@ -2,3 +2,5 @@
 *.user_not_found.html linguist-vendored
 *.user.html linguist-vendored
 *.userdetails.html linguist-vendored
+
+templates/* linguist-vendored
