@@ -78,6 +78,5 @@ Here are some screenshots of the project:
   <img src="output/11.png" alt="#" width="45%" />
   <img src="output/12.png" alt="#" width="45%" style="margin-left: 10px;" />
   <img src="output/13.png" alt="#" width="45%" />
-  <img src="#" alt="#" width="45%" style="margin-left: 10px;" />
 </p>
 
