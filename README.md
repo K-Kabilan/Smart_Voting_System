@@ -46,7 +46,6 @@ Records each vote as a transaction on the blockchain, providing a transparent an
 
 ### **Programming Languages:**
 - Python
-- JavaScript
 
 ### **Web Technologies:**
 - HTML
